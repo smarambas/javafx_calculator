@@ -20,6 +20,18 @@
         <pathelement location="../../lib/java/javafx-swt.jar"/>
         <pathelement location="../../lib/java/src.zip"/>
     </path>
+    <path id="run.MyNumber (1).classpath">
+        <path refid="better_javafx_calc.classpath"/>
+        <pathelement location="../../lib/java/javafx.base.jar"/>
+        <pathelement location="../../lib/java/javafx.controls.jar"/>
+        <pathelement location="../../lib/java/javafx.fxml.jar"/>
+        <pathelement location="../../lib/java/javafx.graphics.jar"/>
+        <pathelement location="../../lib/java/javafx.media.jar"/>
+        <pathelement location="../../lib/java/javafx.swing.jar"/>
+        <pathelement location="../../lib/java/javafx.web.jar"/>
+        <pathelement location="../../lib/java/javafx-swt.jar"/>
+        <pathelement location="../../lib/java/src.zip"/>
+    </path>
     <path id="run.BetterCalc (2).classpath">
         <path refid="better_javafx_calc.classpath"/>
         <pathelement location="../../lib/java/javafx.base.jar"/>
@@ -32,7 +44,7 @@
         <pathelement location="../../lib/java/javafx-swt.jar"/>
         <pathelement location="../../lib/java/src.zip"/>
     </path>
-    <path id="run.MyNumber (1).classpath">
+    <path id="run.Hello (3).classpath">
         <path refid="better_javafx_calc.classpath"/>
         <pathelement location="../../lib/java/javafx.base.jar"/>
         <pathelement location="../../lib/java/javafx.controls.jar"/>
@@ -80,15 +92,20 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
+    <target name="MyNumber (1)">
+        <java classname="better_calc.MyNumber" failonerror="true" fork="yes">
+            <classpath refid="run.MyNumber (1).classpath"/>
+        </java>
+    </target>
     <target name="BetterCalc (2)">
         <java classname="better_calc.BetterCalc" failonerror="true" fork="yes">
             <jvmarg line="--module-path /home/marco/workspace/lib/java/ --add-modules=javafx.controls"/>
             <classpath refid="run.BetterCalc (2).classpath"/>
         </java>
     </target>
-    <target name="MyNumber (1)">
-        <java classname="better_calc.MyNumber" failonerror="true" fork="yes">
-            <classpath refid="run.MyNumber (1).classpath"/>
+    <target name="Hello (3)">
+        <java classname="test.Hello" failonerror="true" fork="yes">
+            <classpath refid="run.Hello (3).classpath"/>
         </java>
     </target>
 </project>

@@ -43,7 +43,7 @@ public class MyNumber {
 			return "Infinity";
 		}
 		else {
-			int scale = 6;
+			int scale = 6;	//decimal numbers to show after the dot
 			BigDecimal ans = num.divide(n.getBD(), scale, RoundingMode.CEILING);
 			return ans.toString();
 		}

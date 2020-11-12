@@ -460,43 +460,33 @@ public class BetterCalc extends Application {
 		number = new MyNumber(numString);
 		if(!stackNumber.getBD().equals(BigDecimal.ZERO) && number.getBD().equals(BigDecimal.ZERO)) {
 			resField.setText("Infinity");
-			
-			curOp = Operations.NOSET;
-			
-			stackNumber.setBD(BigDecimal.ZERO);
-			number.setBD(BigDecimal.ZERO);
-			ans.setBD(BigDecimal.ZERO);
-			
-			numString = "";
-			
-			sumButton.setDisable(false);
-			subButton.setDisable(false);
-			multButton.setDisable(false);
-			divButton.setDisable(false);
-			dotButton.setDisable(false);
+			equalButtonDivCommons();
 		}
 		else if(stackNumber.getBD().equals(BigDecimal.ZERO) && number.getBD().equals(BigDecimal.ZERO)) {
-			resField.setText("NAN");
-			
-			curOp = Operations.NOSET;
-			
-			stackNumber.setBD(BigDecimal.ZERO);
-			number.setBD(BigDecimal.ZERO);
-			ans.setBD(BigDecimal.ZERO);
-			
-			numString = "";
-			
-			sumButton.setDisable(false);
-			subButton.setDisable(false);
-			multButton.setDisable(false);
-			divButton.setDisable(false);
-			dotButton.setDisable(false);
+			resField.setText("nan");
+			equalButtonDivCommons();
 		}
 		else {
 			ans = new MyNumber(stackNumber.div(number));	
 			stackOp = Operations.DIV;
 			equalCommon();
 		}
+	}
+	
+	private void equalButtonDivCommons() {
+		curOp = Operations.NOSET;
+		
+		stackNumber.setBD(BigDecimal.ZERO);
+		number.setBD(BigDecimal.ZERO);
+		ans.setBD(BigDecimal.ZERO);
+		
+		numString = "";
+		
+		sumButton.setDisable(false);
+		subButton.setDisable(false);
+		multButton.setDisable(false);
+		divButton.setDisable(false);
+		dotButton.setDisable(false);
 	}
 	
 	private void equalCommon() {
