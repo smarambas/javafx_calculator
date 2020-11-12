@@ -44,18 +44,6 @@
         <pathelement location="../../lib/java/javafx-swt.jar"/>
         <pathelement location="../../lib/java/src.zip"/>
     </path>
-    <path id="run.Hello (3).classpath">
-        <path refid="better_javafx_calc.classpath"/>
-        <pathelement location="../../lib/java/javafx.base.jar"/>
-        <pathelement location="../../lib/java/javafx.controls.jar"/>
-        <pathelement location="../../lib/java/javafx.fxml.jar"/>
-        <pathelement location="../../lib/java/javafx.graphics.jar"/>
-        <pathelement location="../../lib/java/javafx.media.jar"/>
-        <pathelement location="../../lib/java/javafx.swing.jar"/>
-        <pathelement location="../../lib/java/javafx.web.jar"/>
-        <pathelement location="../../lib/java/javafx-swt.jar"/>
-        <pathelement location="../../lib/java/src.zip"/>
-    </path>
     <target name="init">
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
@@ -101,11 +89,6 @@
         <java classname="better_calc.BetterCalc" failonerror="true" fork="yes">
             <jvmarg line="--module-path /home/marco/workspace/lib/java/ --add-modules=javafx.controls"/>
             <classpath refid="run.BetterCalc (2).classpath"/>
-        </java>
-    </target>
-    <target name="Hello (3)">
-        <java classname="test.Hello" failonerror="true" fork="yes">
-            <classpath refid="run.Hello (3).classpath"/>
         </java>
     </target>
 </project>
