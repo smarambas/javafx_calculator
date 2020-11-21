@@ -34,7 +34,6 @@ public class BetterCalc extends Application {
 	private MyNumber number = new MyNumber("0");
 	private MyNumber ans = new MyNumber("0");
 	
-	private enum Operations {SUM, SUB, MULT, DIV, NOSET}
 	private Operations stackOp = Operations.NOSET;
 	private Operations curOp = Operations.NOSET;
 	
